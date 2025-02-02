@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import AboutText from '@/app/ui/About/AboutText';
+import MovingImage from '@/app/ui/common/MovingImage';
 
 const AboutImage: React.FC = () => {
     return (
@@ -11,26 +12,27 @@ const AboutImage: React.FC = () => {
                 height={500}
                 className=""
             />
-            <Image
+
+            <MovingImage
+                className="left-3 top-36 md:-left-9"
                 src="/images/card.svg"
-                alt="card image"
+                duration={2}
                 width={70}
                 height={80}
-                className="absolute left-3 top-36 md:-left-9"
             />
-            <Image
+            <MovingImage
                 src="/images/hike.svg"
-                alt="Hike image"
+                duration={3}
                 width={90}
                 height={90}
-                className="absolute top-60 left-20"
+                className="top-60 left-20"
             />
-            <Image
+            <MovingImage
                 src="/images/bank.svg"
-                alt="Bank image"
+                duration={2}
                 width={100}
                 height={80}
-                className="absolute top-28 right-3 md:-right-14"
+                className="top-28 right-3 md:-right-14"
             />
 
             <div className="text md:hidden">

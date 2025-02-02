@@ -4,29 +4,9 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { FaGlobe } from 'react-icons/fa';
 import { MdKeyboardArrowDown } from 'react-icons/md';
+import { navlinks } from '@/app/data/navLinks';
 
 const Navlinks: React.FC = () => {
-    const navlinks: Navlink[] = [
-        {
-            href: '#',
-            label: 'Solutions',
-            submenu: ['AnyCaaS', 'AnyBaaS', 'AnyPaaS'],
-        },
-        {
-            href: '/services',
-            label: 'Services',
-        },
-        {
-            href: '/about-us',
-            label: 'About Us',
-        },
-        {
-            href: '#',
-            label: 'EN',
-            type: 'lang-btn',
-        },
-    ];
-
     const [lang, setLang] = useState<boolean>(false);
 
     const handleLangChange = (type: string) => {
@@ -36,16 +16,16 @@ const Navlinks: React.FC = () => {
     };
 
     return (
-        <ul className="flex items-center">
+        <ul className="flex items-center gap-6">
             {navlinks.map(({ label, href, type }, idx) => (
                 <li
                     key={idx}
-                    className={`mr-3 ${type === 'lang-btn' && 'border px-5 py-2 rounded-xl cursor-pointer'}`}
+                    className={`mr-3 ${type === 'lang-btn' && 'border px-5 py-2 rounded-xl cursor-pointer'} hover:border-b`}
                     onClick={() => handleLangChange(type!)}
                 >
                     <Link
                         href={href}
-                        className={`${type === 'lang-btn' && 'flex justify-around items-center gap-2'}`}
+                        className={`${type === 'lang-btn' && 'flex justify-around items-center'}`}
                     >
                         {type === 'lang-btn' && <FaGlobe />}
                         {label}
