@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
                     <Navbar />
                 </header>
                 <div className="content md:flex items-center py-48 leading-9 container mx-auto z-[2] relative">
-                    <div className="titles font-montserrat font-semibold max-w-2xl">
+                    <div className="titles font-montserrat font-semibold max-w-2xl pl-3">
                         <h1 className="text-5xl md:text-7xl">Embrace the</h1>
                         <h1 className="text-5xl md:text-7xl">
                             future of finance

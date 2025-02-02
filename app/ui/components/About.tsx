@@ -8,8 +8,11 @@ const About: React.FC = () => {
         <section className="wrapper bg-gradient-to-bl from-[#FFFFFF] via-[#ffffff] to-[#EEF5FD] pt-20 pb-40 clip-triangle-hero">
             <div className="container mx-auto items-center justify-center block md:flex relative">
                 <div className="content max-w-[550px]">
-                    <Subtitle label="powering the future of finance" />
-                    <h2 className="text-5xl text-[#0B305B] font-semibold tracking-wide font-montserrat mb-10 ">
+                    <Subtitle
+                        label="powering the future of finance"
+                        className="text-center md:text-left"
+                    />
+                    <h2 className="text-5xl text-[#0B305B] font-semibold tracking-wide font-montserrat mb-10 text-center md:text-left">
                         Uncovering new ways to delight customers
                     </h2>
                     <div className="text hidden md:block">
